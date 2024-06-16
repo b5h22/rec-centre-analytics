@@ -11,17 +11,17 @@ from analysis.member_segmentation import plot_preferred_facilities_by_gender, pl
 def load_preprocessed_data():
     data_dir = 'data'
     
-    gender_dist = pd.read_csv(os.path.join(data_dir, 'gender_distribution.csv'), index_col=0)
-    age_dist = pd.read_csv(os.path.join(data_dir, 'age_distribution.csv'), index_col=0)
-    campus_dist = pd.read_csv(os.path.join(data_dir, 'campus_distribution.csv'), index_col=0)
-    reg_trends = pd.read_csv(os.path.join(data_dir, 'registration_date_trends.csv'), index_col=0)
-    entry_trends_day = pd.read_csv(os.path.join(data_dir, 'entry_trends_day.csv'), index_col=0)
-    entry_trends_time = pd.read_csv(os.path.join(data_dir, 'entry_trends_time.csv'), index_col=0)
-    facility_usage = pd.read_csv(os.path.join(data_dir, 'facility_usage.csv'), index_col=0)
-    peak_times_df = pd.read_csv(os.path.join(data_dir, 'peak_times.csv'), index_col=0)
-    facility_dist = pd.read_csv(os.path.join(data_dir, 'facility_distribution.csv'), index_col=0)
-    facility_gender = pd.read_csv(os.path.join(data_dir, 'facility_gender.csv'), index_col=0)
-    facility_age = pd.read_csv(os.path.join(data_dir, 'facility_age.csv'), index_col=0)
+    gender_dist = pd.read_csv(os.path.join(os.path.dirname(__file__), data_dir, 'gender_distribution.csv'), index_col=0)
+    age_dist = pd.read_csv(os.path.join(os.path.dirname(__file__), data_dir, 'age_distribution.csv'), index_col=0)
+    campus_dist = pd.read_csv(os.path.join(os.path.dirname(__file__), data_dir, 'campus_distribution.csv'), index_col=0)
+    reg_trends = pd.read_csv(os.path.join(os.path.dirname(__file__), data_dir, 'registration_date_trends.csv'), index_col=0)
+    entry_trends_day = pd.read_csv(os.path.join(os.path.dirname(__file__), data_dir, 'entry_trends_day.csv'), index_col=0)
+    entry_trends_time = pd.read_csv(os.path.join(os.path.dirname(__file__), data_dir, 'entry_trends_time.csv'), index_col=0)
+    facility_usage = pd.read_csv(os.path.join(os.path.dirname(__file__), data_dir, 'facility_usage.csv'), index_col=0)
+    peak_times_df = pd.read_csv(os.path.join(os.path.dirname(__file__), data_dir, 'peak_times.csv'), index_col=0)
+    facility_dist = pd.read_csv(os.path.join(os.path.dirname(__file__), data_dir, 'facility_distribution.csv'), index_col=0)
+    facility_gender = pd.read_csv(os.path.join(os.path.dirname(__file__), data_dir, 'facility_gender.csv'), index_col=0)
+    facility_age = pd.read_csv(os.path.join(os.path.dirname(__file__), data_dir, 'facility_age.csv'), index_col=0)
     
     return {
         "gender_dist": gender_dist.squeeze(),
