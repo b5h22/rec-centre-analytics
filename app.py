@@ -40,7 +40,7 @@ def load_preprocessed_data():
 data = load_preprocessed_data()
 
 # Streamlit app layout
-st.title('Newnham Recreation Centre Dashboard')
+st.title('Newnham Recreation Centre Dashboard (Fall 2023)')
 
 # Menu bar
 menu_options = [
