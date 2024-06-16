@@ -26,6 +26,8 @@ The Newnham Recreation Centre Dashboard provides insights into member demographi
 - Streamlit
 - Pandas
 - Matplotlib
+- openpyxl
+- dotenv
 
 
 ## Project Structure
