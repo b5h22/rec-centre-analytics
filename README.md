@@ -5,6 +5,7 @@ This project is a data analysis and visualization application for the Newnham Re
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
+- [Data Privacy Considerations](#data-privacy-considerations)
 - [Requirements](#requirements)
 - [Project Structure](#project-structure)
 - [Acknowledgements](#acknowledgements)
@@ -21,6 +22,10 @@ The Newnham Recreation Centre Dashboard provides insights into member demographi
 - **Member Preferences**: Examine preferred facilities by gender and age group.
 
 
+## Data Privacy Considerations
+To protect member privacy, all data analysis for this project was conducted locally on secure servers using anonymized data. Results were stored in CSV files under the `data` directory, ensuring that no personally identifiable information is exposed or transmitted outside of controlled environments.
+
+
 ## Requirements
 - Python 3.7 or higher
 - Streamlit
@@ -34,13 +39,27 @@ The Newnham Recreation Centre Dashboard provides insights into member demographi
 ```
 .
 ├── analysis
-│   ├── facility_usage.py
-│   ├── member_activity.py
-│   ├── member_distribution.py
-│   ├── member_segmentation.py
+│ ├── facility_usage.py
+│ ├── member_activity.py
+│ ├── member_distribution.py
+│ ├── member_segmentation.py
 ├── utils
-│   ├── data_loader.py
+│ ├── data_loader.py
+│ └── preprocess_data.py
+├── data
+│ ├── age_distribution.csv
+│ ├── campus_distribution.csv
+│ ├── entry_trends_day.csv
+│ ├── entry_trends_time.csv
+│ ├── facility_age.csv
+│ ├── facility_distribution.csv
+│ ├── facility_gender.csv
+│ ├── facility_usage.csv
+│ ├── gender_distribution.csv
+│ ├── peak_times.csv
+│ └── registration_date_trends.csv
 ├── app.py
+├── preprocess.py
 ├── requirements.txt
 ├── .env
 └── README.md
