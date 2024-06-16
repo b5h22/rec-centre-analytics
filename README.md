@@ -66,7 +66,9 @@ To protect member privacy, all data analysis for this project was conducted loca
 ```
 - **analysis**: Contains modules for generating various plots and visualizations.
 - **utils**: Contains the data loading utility.
+- **data**: Directory where preprocessed data files are stored, including CSV files generated from member and entry records.
 - **app.py**: Main application script.
+ **preprocess.py**: Script for preprocessing member and entry data, generating CSV files used for analysis.
 - **requirements.txt**: Lists the dependencies required for the project.
 - **.env**: Environment file for configuration
 
