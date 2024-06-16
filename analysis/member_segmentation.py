@@ -3,8 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 
-def plot_preferred_facilities_by_gender(entries_df):
-    facility_gender = entries_df.groupby(['gender', 'facility']).size().unstack().fillna(0)
+def plot_preferred_facilities_by_gender(facility_gender):
     colors = ['#ff9999', '#ffc000', '#8fd9b6', '#d395d0', '#ffcc99', '#c2c2f0', '#ffb3e6', '#c4e17f', '#76d7c4', '#f7b7a3']
     wedgeprops = {'width': 0.7, 'edgecolor': 'w', 'linewidth': 5}
     
@@ -16,8 +15,7 @@ def plot_preferred_facilities_by_gender(entries_df):
         plt.title(f'Preferred Facilities by Gender: {gender}')
         st.pyplot(plt)
 
-def plot_preferred_facilities_by_age(entries_df):
-    facility_age = entries_df.groupby(['age_group', 'facility']).size().unstack().fillna(0)
+def plot_preferred_facilities_by_age(facility_age):
     colors = ['#ff9999', '#ffc000', '#8fd9b6', '#d395d0', '#ffcc99', '#c2c2f0', '#ffb3e6', '#c4e17f', '#76d7c4', '#f7b7a3']
     wedgeprops = {'width': 0.7, 'edgecolor': 'w', 'linewidth': 5}
     

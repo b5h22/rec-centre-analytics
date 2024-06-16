@@ -43,10 +43,6 @@ def load_entries_data(filepath, members_df, log_unmatched=True):
     # Merge with members_df to get 'gender' and other member info
     merged_df = pd.merge(matched_entries_df, members_df, on='member_id', how='left')
 
-    # Log unmatched entries if needed
-    if log_unmatched and not unmatched_entries_df.empty:
-      unmatched_entries_df.to_csv('unmatched_entries_log.csv', index=False)
-
     return merged_df
   except Exception as e:
     raise RuntimeError(f"Failed to load entries data: {e}")
