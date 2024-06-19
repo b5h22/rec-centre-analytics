@@ -1,5 +1,4 @@
 # analysis/member_activity.py
-import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import streamlit as st

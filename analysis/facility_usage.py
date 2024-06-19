@@ -1,5 +1,4 @@
 # analysis/facility_usage.py
-import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 
